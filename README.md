@@ -1,21 +1,14 @@
-# vue-cli3-webpack4-mulitipage
+基本多页面配置，支持多页面开发及打包
 
-## Project setup
-```
-yarn install
-```
+后续方向：
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+支持指定模块启动及调试
+支持全部模块启动及调试
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+支持指定模块打包
+支持全部模块打包
 
-### Lints and fixes files
-```
-yarn run lint
-```
+为什么要支持指定模块的调试及打包？
+
+1. 热更新及打包缓慢
+2. 子应用单独开发，开发效率高
