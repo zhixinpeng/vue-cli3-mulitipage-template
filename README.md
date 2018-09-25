@@ -1,21 +1,30 @@
-# vue-cli3-webpack4-mulitipage
+# vue-cli 3.x 脚手架多页面配置及拓展
 
-## Project setup
+## 项目依赖安装
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 项目启动
 ```
 yarn run serve
 ```
 
-### Compiles and minifies for production
+### 项目打包
 ```
 yarn run build
 ```
 
-### Lints and fixes files
-```
-yarn run lint
-```
+## 为什么拓展
+
+1. vue-cli 2.x版本脚手架不支持多页面配置，且2.x使用的webapck构建任务不支持多线程以及DLL，全靠自己拓展，不便于维护和升级。
+
+2. vue-cli 2.x在多页面数量较多的情况下，且一个单页比较大的时候，不管本地热更新还是构建打包，都是非常慢的。我公司之前项目分为多达十几个应用，在不开启webpack多线程的时候，整个项目热更新需要40秒左右！这意味着当你修改并保持文件之后，需要40秒页面才更新，而且公司使用的较早期版本的脚手架，没有热更新，等待40多秒刷新页面，而这样的一种构建工具，我们公司百来号前端用了长达一年多的时间，想想一个人刷新一次40秒，100个人开发得浪费多少时间。所以，在大型的多页面项目中支持启动单页调试功能非常非常重要！
+
+3. 现在工程大多存在多个子应用，且多个子应用通常使用一套组件，但是子应用采用单独发包迭代。通常是建立多个工程，然后前端库和组件库都上传NPM，其实这样也挺费劲的。所以支持多应用也很有必要。
+
+## 参考文章
+
+1. [vue-cli 3.0脚手架配置及扩展](https://blog.csdn.net/franks_t_d/article/details/80739902)
+
+

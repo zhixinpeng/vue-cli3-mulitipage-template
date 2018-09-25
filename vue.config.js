@@ -83,9 +83,15 @@ module.exports = {
     // 启用webpack的模块热替换特性
     hot: true,
     // API接口请求代理
-    proxy: {},
-    // 向PWA插件传递选项
-    // https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
-    pwa: {}
-  }
+    proxy: {
+      '/api': {
+        target: '<url>',
+        ws: true,
+        changeOrigin: true
+      }
+    }
+  },
+  // 向PWA插件传递选项
+  // https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
+  pwa: {}
 }
