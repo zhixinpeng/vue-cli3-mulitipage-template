@@ -1,4 +1,5 @@
 # vue-cli 3.x 脚手架多页面配置及拓展
+使用yarn或者npm均可
 
 ## 项目依赖安装
 ```
@@ -6,13 +7,25 @@ yarn install
 ```
 
 ### 项目启动
+独立运行某个应用，需在config/config.js中配置需要使用的应用名称
 ```
 yarn run serve
 ```
 
+运行所有应用
+```
+yarn run serve:all
+```
+
 ### 项目打包
+独立打包某个应用，需在config/config.js中配置需要使用的应用名称
 ```
 yarn run build
+```
+
+打包所有应用
+```
+yarn run build:all
 ```
 
 ## 为什么拓展
